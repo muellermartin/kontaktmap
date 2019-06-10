@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<title>kontakt 2019 Geländeplan</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/leaflet.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+		<script src="{{ url_for('static', filename='js/leaflet.js') }}"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="map"></div>
+			<div class="sidebar-button">▶︎</div>
+			<div class="sidebar">
+				<div class="tools">
+					<div class="label">Tools</div>
+					<button class="marker-add">Add Marker</button>
+				</div>
+				<div class="list">
+					<div class="label">Markers</div>
+					<ol>
+					</ol>
+				</div>
+				<div class="marker-properties">
+					<div class="label">Marker Properties</div>
+					<form action="" method="POST">
+						<label for="name">Name:</label>
+						<input type="text" name="name" id="name" />
+						<input type="submit" value="OK" />
+						<input type="button" value="Delete" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	</body>
+</html>
